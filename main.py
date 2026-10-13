@@ -1,5 +1,4 @@
 from pyscript import document, display
-# Use document if there is a form
 
 def nameChecker (e):
 
@@ -9,13 +8,14 @@ def nameChecker (e):
     fname = (document.getElementById("fname").value)
     lname = (document.getElementById("lname").value)
 
-    name = fname + lname
+# Variable using concatenation for the name the user will input to appear
+    name = fname + " " + lname
 
-# Variable to determine whether the user's name is listed or not (true or false) with the use of concatination
-    full_name = (fname + lname) in pangalan
+# Variable to determine whether the user's name is listed or not (true or false)
+    full_name = (name in pangalan)
 
 # First statement = 0 = False | Second Statement = 1 = True
-    remark = (f'Sorry, {name}, your name is not on the list.', f'Congrats! {name}, you are a member of the Rainbow Catering Club!')
+    remark = (f'Sorry, {name}, your name is not on the list.', f'Congrats! {name}, YOU ARE a member of the Rainbow Catering Club!')
 
     document.getElementById("output1").innerHTML = remark[full_name]
 
