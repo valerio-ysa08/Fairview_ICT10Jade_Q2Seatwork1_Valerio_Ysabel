@@ -18,29 +18,48 @@
     <title>Q2 Seatwork 1</title>
     <style>
         body {
-            background: url(https://i.pinimg.com/736x/5d/2b/da/5d2bda44b15ef16ce8a96e7ce93f6f6a.jpg);
+            background: url(https://i.pinimg.com/736x/a7/18/02/a7180260fecadc84f1c31d7734674d9b.jpg);
             background-size: cover;
         }
 
         h1 {
-            margin-top: 50px;
+            margin-top: 80px;
             text-align: center;
             font-family: Bonbon;
             font-size: 50px; 
+            font-weight: bold;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .container {
+        margin-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        align-items: center;
+        text-align: center;
+        font-family: Andika;
+        background-color: rgba(245, 175, 207, 0.67);
+        width: 100%;
         }
 
     </style>
 </head>
 <body>
-    <h1>Rainbow Catering Club: Name Checker</h1>
-    <form action="">
-        <label for ="">Name</label>
+    <h1>Rainbow Catering Club: Name Checker 👩‍🍳🌈</h1>
+    <div class = "container text-center">
+    <form>
+        <label for ="">Enter your name in the boxes below to find out. All the best! ⭐️</label>
         <input type="text" id="fname" class="form-control" placeholder="First Name" required>
         <br>
         <input type="text" id="lname" class="form-control" placeholder="Last Name" required>
-
+        <br>
         <br>
         <button type="button" class="btn btn-warning" py-click="nameChecker">Let's see!</button>
+    </form>
 
     <div id="output1"></div>
     <script type="py" src="main.py"></script>

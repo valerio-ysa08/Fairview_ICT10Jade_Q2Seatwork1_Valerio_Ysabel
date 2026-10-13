@@ -3,16 +3,20 @@ from pyscript import document, display
 
 def nameChecker (e):
 
-    fname = ["Ysabel", "Joy", "Hector", "Emman", "Anthony"]
+# Variables for the names that are considered true
+    pangalan = ["Ysabel Valerio", "Joy Manawari", "Hector Samala", "Emman Azarcon", "Anthony Cruz"]
 
-    lname = ["Valerio", "Manawari", "Samala", "Azarcon", "Cruz"]
+    fname = (document.getElementById("fname").value)
+    lname = (document.getElementById("lname").value)
 
-    name1 = str(document.getElementById("fname").value)
-    name2 = str(document.getElementById("lname").value)
+    name = fname + lname
 
-    full_name = name1 + name2
+# Variable to determine whether the user's name is listed or not (true or false) with the use of concatination
+    full_name = (fname + lname) in pangalan
 
-    remark = display(f'Sorry, {full_name}, your name is not on the list.', f'Congrats! {full_name}, your a member of the Rainbow Catering Club!', target="nameChecker")
-    # First statement = 0 = False | Second Statement = 1 = True
+# First statement = 0 = False | Second Statement = 1 = True
+    remark = (f'Sorry, {name}, your name is not on the list.', f'Congrats! {name}, you are a member of the Rainbow Catering Club!')
 
-    document.getElementById("output1").innerHTML = message[full_name]
+    document.getElementById("output1").innerHTML = remark[full_name]
+
+    
